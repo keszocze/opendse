@@ -11,7 +11,7 @@ import net.sf.opendse.io.ReaderTGFF;
 import net.sf.opendse.optimization.SpecificationWrapper;
 
 /**
- * {@link SpecificationWrapper} for {@lińk SpecificationTypeBased}s.
+ * {@link SpecificationWrapper} for {@link SpecificationTypeBased}s.
  * 
  * @author Valentina Richthammer
  */

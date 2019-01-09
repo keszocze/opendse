@@ -142,8 +142,8 @@ public class Encoding {
 	}
 
 	/**
-	 * This method addresses the case when there is a dependancy between two
-	 * process tasks.
+	 * This method addresses the case when there is a dependency between two process
+	 * tasks.
 	 * 
 	 * @param constraints
 	 * @param specification
