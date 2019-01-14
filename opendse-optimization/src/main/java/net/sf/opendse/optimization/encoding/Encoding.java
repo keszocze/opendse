@@ -55,6 +55,7 @@ import net.sf.opendse.optimization.encoding.variables.CR;
 
 import org.opt4j.satdecoding.Constraint;
 
+
 import com.google.inject.Inject;
 
 import edu.uci.ics.jung.graph.util.Pair;
@@ -108,8 +109,8 @@ public class Encoding {
 	}
 
 	/**
-	 * For each process task in the application graph, exactly one mapping edge
-	 * has to be activated in the implementation.
+	 * For each process task in the application graph, exactly one mapping edge has
+	 * to be activated in the implementation.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -125,8 +126,8 @@ public class Encoding {
 	}
 
 	/**
-	 * A resource which is the mapping target of an activated mapping edge also
-	 * has to be activated in a valid implementation.
+	 * A resource which is the mapping target of an activated mapping edge also has
+	 * to be activated in a valid implementation.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -227,8 +228,8 @@ public class Encoding {
 	}
 
 	/**
-	 * If the routing variable of a directed link is activated, this link has to
-	 * be activated in the architecture.
+	 * If the routing variable of a directed link is activated, this link has to be
+	 * activated in the architecture.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -269,10 +270,9 @@ public class Encoding {
 	}
 
 	/**
-	 * An architecture link may only be part of one directed link in the
-	 * routings (based on the link connected resource A to resource B, either
-	 * the link from A to B or the link fom B to A may be taken into the
-	 * routing, but not both)
+	 * An architecture link may only be part of one directed link in the routings
+	 * (based on the link connected resource A to resource B, either the link from A
+	 * to B or the link from B to A may be taken into the routing, but not both)
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -333,9 +333,8 @@ public class Encoding {
 	}
 
 	/**
-	 * If the predecessor of a communication is mapped to a resource, this
-	 * resource must not have any in-links in the routing graph of the
-	 * communication.
+	 * If the predecessor of a communication is mapped to a resource, this resource
+	 * must not have any in-links in the routing graph of the communication.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -380,9 +379,9 @@ public class Encoding {
 	}
 
 	/**
-	 * If a resource is activated in the routing of a communication, it must be
-	 * the mapping target of at least one of the successors of the communication
-	 * and/or have at least one activated out-link.
+	 * If a resource is activated in the routing of a communication, it must be the
+	 * mapping target of at least one of the successors of the communication and/or
+	 * have at least one activated out-link.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -409,9 +408,9 @@ public class Encoding {
 	}
 
 	/**
-	 * If a resource is activated in the routing of a communication, it must be
-	 * the maping target of at least one of the predecessors of the
-	 * communication and/or have at least one activated in-link.
+	 * If a resource is activated in the routing of a communication, it must be the
+	 * maping target of at least one of the predecessors of the communication and/or
+	 * have at least one activated in-link.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -464,10 +463,10 @@ public class Encoding {
 	 * ONLY USED FOR ENCODING OF UNICAST MESSAGES
 	 * 
 	 * A resource in the unicast routing is either a) the mapping target of the
-	 * communication predecessor and has one out-link, b) the mapping target of
-	 * the communication successor and has one in-link, c) a resource with one
-	 * in- and one out-link or d) the mapping target of both the pre- and the
-	 * successor of the communication.
+	 * communication predecessor and has one out-link, b) the mapping target of the
+	 * communication successor and has one in-link, c) a resource with one in- and
+	 * one out-link or d) the mapping target of both the pre- and the successor of
+	 * the communication.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -505,9 +504,8 @@ public class Encoding {
 	}
 
 	/**
-	 * A resource in the routing graph of a communication must not have
-	 * activated in-links if it is the mapping target of the predecessor of the
-	 * communication.
+	 * A resource in the routing graph of a communication must not have activated
+	 * in-links if it is the mapping target of the predecessor of the communication.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -535,8 +533,8 @@ public class Encoding {
 	}
 
 	/**
-	 * A resource in the routing graph of a communication flow must not have
-	 * more than one activated in-link.
+	 * A resource in the routing graph of a communication flow must not have more
+	 * than one activated in-link.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -560,8 +558,8 @@ public class Encoding {
 	}
 
 	/**
-	 * A resource in the routing graph of a communication flow must not have
-	 * more than one activated out-link.
+	 * A resource in the routing graph of a communication flow must not have more
+	 * than one activated out-link.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -587,10 +585,10 @@ public class Encoding {
 
 	/**
 	 * A resource in the routing graph of a communication flow is either a) the
-	 * mapping target of the communication predecessor of the communication and
-	 * has one out-link, b) has one in- and one out-link, c) has one in-link and
-	 * is the mapping target of the communication successor or d) is the mapping
-	 * target of both the communication pre- and the communication successor
+	 * mapping target of the communication predecessor of the communication and has
+	 * one out-link, b) has one in- and one out-link, c) has one in-link and is the
+	 * mapping target of the communication successor or d) is the mapping target of
+	 * both the communication pre- and the communication successor
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -626,8 +624,8 @@ public class Encoding {
 	}
 
 	/**
-	 * A resource is only activated in the routing graph of a communication if
-	 * at least one communication flow is routed over this resource.
+	 * A resource is only activated in the routing graph of a communication if at
+	 * least one communication flow is routed over this resource.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -648,8 +646,8 @@ public class Encoding {
 	}
 
 	/**
-	 * A resource may only be used for the routing of a communication flow if it
-	 * is also activated in the routing of the communication.
+	 * A resource may only be used for the routing of a communication flow if it is
+	 * also activated in the routing of the communication.
 	 * 
 	 * @param constraints
 	 * @param specification
@@ -670,8 +668,8 @@ public class Encoding {
 	}
 
 	/**
-	 * A resource may only be activated in the routing graph of a communication
-	 * if it is activated in the architecture graph.
+	 * A resource may only be activated in the routing graph of a communication if
+	 * it is activated in the architecture graph.
 	 * 
 	 * @param constraints
 	 * @param specification
