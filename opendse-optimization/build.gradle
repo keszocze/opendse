@@ -4,10 +4,11 @@ dependencies {
 	compile project(':opendse-visualization')
 	
 	compile group: 'org.opt4j',	name: 'opt4j-core', 		version: '3.1.4'
-	compile group: 'org.opt4j',	name: 'opt4j-satdecoding', 	version: '3.1.4'
+	//compile group: 'org.opt4j',	name: 'opt4j-satdecoding', 	version: '3.1.4'
 	compile group: 'org.opt4j',	name: 'opt4j-optimizers', 	version: '3.1.4'
 	compile group: 'org.opt4j',	name: 'opt4j-viewer', 		version: '3.1.4'
 
 	testCompile 'junit:junit:4.12'
 	testCompile group: 'org.mockito', name: 'mockito-core', version: '2.22.0'
+	implementation 'com.github.keszocze.opt4j:opt4j-benchmarks:pb_or-SNAPSHOT'
 }

@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    }
+}
+
+
 plugins {
 	id 'com.github.kt3k.coveralls' version '2.6.3'
 }
@@ -5,6 +16,8 @@ apply plugin: 'base'
 apply plugin: 'maven'
 apply plugin: 'application'
 apply plugin: 'eclipse'
+apply plugin: 'com.github.johnrengelman.shadow'
+
 
 version = 'SNAPSHOT-' + new Date().format("yyyyMMdd")
 
@@ -27,6 +40,7 @@ allprojects {
 	repositories {
     	mavenCentral()
 		mavenLocal()
+        maven { url 'https://jitpack.io' }
 	}
 }
 
@@ -145,7 +159,19 @@ dependencies {
 	runtime project(':opendse-visualization')
 	runtime project(':opendse-optimization')
 	runtime project(':opendse-realtime')
+
+//    implementation 'com.github.keszocze:opt4j:pb_or-SNAPSHOT'
+    implementation 'com.github.keszocze.opt4j:opt4j-benchmarks:pb_or-SNAPSHOT'
 }
+
+shadowJar {
+    baseName = 'shadow'
+    classifier = null
+    version = null
+}
+
+
+ 
 
 jar {
 	manifest { 
