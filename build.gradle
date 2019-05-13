@@ -160,8 +160,8 @@ dependencies {
 	runtime project(':opendse-optimization')
 	runtime project(':opendse-realtime')
 
-//    implementation 'com.github.keszocze:opt4j:pb_or-SNAPSHOT'
-    implementation 'com.github.keszocze.opt4j:opt4j-benchmarks:pb_or-SNAPSHOT'
+    implementation 'com.github.keszocze:opt4j:pb_or-SNAPSHOT'
+//    implementation 'com.github.keszocze.opt4j:opt4j-benchmarks:pb_or-SNAPSHOT'
 }
 
 shadowJar {
